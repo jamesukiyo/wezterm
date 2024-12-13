@@ -1,0 +1,3 @@
+### wezterm config :)
+
+~/.config/wezterm/
