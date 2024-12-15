@@ -9,17 +9,21 @@ function module.apply_to_config(config)
     config.integrated_title_button_style = "Windows"
     config.integrated_title_buttons = { 'Hide', 'Close' }
     config.use_fancy_tab_bar = false
-    config.window_background_opacity = 0.95
+    -- config.window_background_opacity = 0.95
+    config.window_background_image = "C:\\Users\\james\\.config\\wezterm\\james\\backgrounds\\frieren.jpg"
+    config.window_background_image_hsb = { brightness = 0.01 }
     config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
     
     config.color_scheme = "Rosé Pine (Gogh)"
 
     config.font_shaper = "Harfbuzz"
     config.font = wezterm.font {
-        family = 'MesloLGM Nerd Font',
-        harfbuzz_features = { 'calt=1', 'clig=1', 'liga=1' },
+        family = 'Fira Code',
+        weight = "Medium",
+        italic = false,
+        harfbuzz_features = {"ss01", "ss04", "ss07", "cv01", "cv02", "cv04", 
+            "cv16", "cv18", "cv31","cv30", "zero"}
     }
-    
 end
 
 return module
