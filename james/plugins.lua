@@ -7,6 +7,7 @@ function module.apply_to_config(config)
 
     tabline.setup({
         options = {
+            theme = "catppuccin-mocha",
             section_separators = {
                 left = wezterm.nerdfonts.pl_left_hard_divider,
                 right = wezterm.nerdfonts.pl_right_hard_divider,
@@ -21,7 +22,7 @@ function module.apply_to_config(config)
               },
         },
         sections = {
-            tabline_a = { 'window' },
+            tabline_a = { 'workspace' },
             tabline_b = { '' },
             tabline_c = { '' },
             tab_active = {
