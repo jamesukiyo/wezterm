@@ -11,7 +11,8 @@ function module.apply_to_config(config)
     config.use_fancy_tab_bar = false
     -- config.window_background_opacity = 0.95
     config.window_background_image = "C:\\Users\\james\\.config\\wezterm\\james\\backgrounds\\frieren.jpg"
-    config.window_background_image_hsb = { brightness = 0.01 }
+    config.window_background_image = "C:\\Users\\james\\.config\\wezterm\\james\\backgrounds\\skrawz2.jpg"
+    config.window_background_image_hsb = { brightness = 0.025 }
     config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
     
     config.color_scheme = "Rosé Pine (Gogh)"
