@@ -9,6 +9,12 @@ function module.apply_to_config(config)
     config.integrated_title_button_style = "Windows"
     config.integrated_title_buttons = { 'Hide', 'Close' }
     config.use_fancy_tab_bar = false
+    config.window_padding = {
+        top = 0,
+        right = 0,
+        bottom = 0,
+        left = 0,
+    }
     config.show_new_tab_button_in_tab_bar = false
     -- config.window_background_opacity = 0.95
     config.window_background_image = "C:\\Users\\james\\.config\\wezterm\\james\\backgrounds\\frieren.jpg"

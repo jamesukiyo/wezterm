@@ -11,15 +11,15 @@ function module.apply_to_config(config)
             section_separators = {
                 left = wezterm.nerdfonts.pl_left_hard_divider,
                 right = wezterm.nerdfonts.pl_right_hard_divider,
-              },
+            },
             component_separators = {
                 left = wezterm.nerdfonts.pl_left_soft_divider,
                 right = wezterm.nerdfonts.pl_right_soft_divider,
-              },
+            },
             tab_separators = {
                 left = wezterm.nerdfonts.pl_left_hard_divider,
                 right = wezterm.nerdfonts.pl_right_hard_divider,
-              },
+            },
         },
         sections = {
             tabline_a = { 'workspace' },
@@ -41,6 +41,32 @@ function module.apply_to_config(config)
             tabline_z = { 'hostname' },
         },
     })
+    
+
+    -- ZEN MODE CONFIG FOR NEOVIM/WEZTERM
+    wezterm.on('user-var-changed', function(window, pane, name, value)
+        local overrides = window:get_config_overrides() or {}
+        if name == "ZEN_MODE" then
+            local incremental = value:find("+")
+            local number_value = tonumber(value)
+            if incremental ~= nil then
+                while (number_value > 0) do
+                    window:perform_action(wezterm.action.IncreaseFontSize, pane)
+                    number_value = number_value - 1
+                end
+                overrides.enable_tab_bar = false
+            elseif number_value < 0 then
+                window:perform_action(wezterm.action.ResetFontSize, pane)
+                overrides.font_size = nil
+                overrides.enable_tab_bar = true
+            else
+                overrides.font_size = number_value
+                overrides.enable_tab_bar = false
+            end
+        end
+        window:set_config_overrides(overrides)
+    end)
+
 end
 
 return module
