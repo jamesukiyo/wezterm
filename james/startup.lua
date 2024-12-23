@@ -14,7 +14,7 @@ function module.apply_to_config(config)
 
         local second_tab, second_pane = window:spawn_tab {}
         local split_second = second_pane:split { 
-            direction = "Right",
+            direction = "Left",
             size = 0.5,
         }
 
