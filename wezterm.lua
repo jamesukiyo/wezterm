@@ -7,6 +7,8 @@ local plugins = require("james.plugins")
 local ui = require("james.ui")
 local startup = require("james.startup")
 
+config.max_fps = 240
+config.animation_fps = 240
 config.default_prog = {"C:/Program Files/Git/bin/bash.exe", "-i", "-l" }
 
 remap.apply_to_config(config)
