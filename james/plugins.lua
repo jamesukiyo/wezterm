@@ -7,7 +7,8 @@ function module.apply_to_config(config)
 
     tabline.setup({
         options = {
-            theme = "catppuccin-mocha",
+            --theme = "catppuccin-mocha",
+            theme = "rose-pine",
             section_separators = {
                 left = wezterm.nerdfonts.pl_left_hard_divider,
                 right = wezterm.nerdfonts.pl_right_hard_divider,

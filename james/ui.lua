@@ -22,8 +22,8 @@ function module.apply_to_config(config)
     config.window_background_image_hsb = { brightness = 0.025 }
     config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
-    -- config.color_scheme = "Rosé Pine (Gogh)"
-    config.color_scheme = "Catppuccin Mocha"
+    config.color_scheme = "rose-pine"
+    -- config.color_scheme = "Catppuccin Mocha"
 
     -- config.font_shaper = "Harfbuzz"
     -- config.font = wezterm.font {
