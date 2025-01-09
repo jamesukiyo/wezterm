@@ -33,10 +33,10 @@ function module.apply_to_config(config)
         { key = 'L', mods = 'LEADER', action = act.SplitPane({ direction = 'Right' }) },
         { key = 'J', mods = 'LEADER', action = act.SplitPane({ direction = 'Down' }) },
         { key = 's', mods = 'LEADER', action = act.EmitEvent('toggle-tabbar') },
-        { key = 'h', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Left', 20 }) },
-        { key = 'l', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Right', 20 }) },
-        { key = 'j', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Down', 20 }) },
-        { key = 'k', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Up', 20 }) },
+        { key = 'h', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Left', 40 }) },
+        { key = 'l', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Right', 40 }) },
+        { key = 'j', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Down', 40 }) },
+        { key = 'k', mods = 'LEADER|CTRL', action = act.AdjustPaneSize({ 'Up', 40 }) },
     }
 
     for i = 1, 8 do
