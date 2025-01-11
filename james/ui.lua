@@ -36,9 +36,11 @@ function module.apply_to_config(config)
     -- }
 
     config.font = wezterm.font {
-        family = 'Iosevka Comfy Medium',
+        family = "Iosevka",
+        weight = "Medium",
+        italic = false,
     }
-    config.font_size = 14
+    config.font_size = 16
 end
 
 return module
